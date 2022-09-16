@@ -10,7 +10,7 @@ app.use(express.static("static")); //Using express.static to load css and images
 app.use(bodyParser.urlencoded({extended : true})); //Using body-parser to parse request body
 
 mailchimp.setConfig({ //Setting up mailchimp
-    apiKey: "ea7a7cae750a773d8b7a3f8714b2cd56-us8",
+    apiKey: //Your API Key,
     server: "us8"
 });
 
@@ -23,7 +23,7 @@ app.post("/", (req, res) => {
     const lastName = req.body.lastName;
     const userEmail = req.body.userEmail;
 
-    const listId = "24725d7ed5";
+    const listId = //Your list id;
 
     async function run() {
         try {
